@@ -1,4 +1,4 @@
-import random
+import secrets
 
 class RandomCycler:
     """
@@ -16,7 +16,7 @@ class RandomCycler:
         self.next_items = []
     
     def sample(self, count: int):
-        shuffle = lambda l: random.sample(l, len(l))
+        shuffle = lambda l: secrets.SystemRandom().sample(l, len(l))
         
         out = []
         while count > 0:
